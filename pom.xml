@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>seleniumDemo</groupId>
+	<artifactId>seleniumDemo</artifactId>
+	<version>0.1-SNAPSHOT</version>
+
+	<name>seleniumDemo</name>
+	<description>A graphical application to view and manage ZooKeeper
+	</description>
+	
+
+
+	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<dependency>
+		    <groupId>org.seleniumhq.selenium</groupId>
+		    <artifactId>selenium-java</artifactId>
+		    <version>3.141.5</version>
+		</dependency>
+	</dependencies>
+
+	<licenses>
+		<license>
+			<name>GNU Lesser General Public License v3+</name>
+			<url>http://www.gnu.org/licenses/lgpl.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>http://code.google.com/p/zooviewer/source/browse/trunk</url>
+		<connection>scm:svn:http://zooviewer.googlecode.com/svn/trunk</connection>
+		<developerConnection>scm:svn:https://zooviewer.googlecode.com/svn/trunk</developerConnection>
+	</scm>
+
+	<issueManagement>
+		<system>Google Code Issue Tracking</system>
+		<url>http://code.google.com/p/zooviewer/issues/list</url>
+	</issueManagement>
+
+
+
+
+</project>
