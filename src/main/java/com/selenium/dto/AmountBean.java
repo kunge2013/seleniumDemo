@@ -1,8 +1,8 @@
 package com.selenium.dto;
 
-import com.selenium.dto.GoodAmountBean.GoodAmountDTO;
+import com.selenium.dto.AmountBean.GoodAmountDTO;
 
-public class GoodAmountBean extends EventBean<GoodAmountDTO> {
+public class AmountBean extends EventBean<GoodAmountDTO> {
 
 	public static class GoodAmountDTO extends EventBean.DataDTO {
 		

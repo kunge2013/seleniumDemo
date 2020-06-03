@@ -1,5 +1,13 @@
 package com.selenium.event;
 
-public class QuitEvent {
+import com.selenium.dto.QuitBean;
+
+public class QuitEvent extends ChainEvent<QuitBean, QuitBean.QuitDTO>{
+
+	@Override
+	public void doEvent() {
+		if(hasNextEvent()) nextEvent.doEvent();
+	}
+	
 
 }

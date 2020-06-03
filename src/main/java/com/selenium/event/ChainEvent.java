@@ -9,11 +9,14 @@ import com.selenium.dto.EventBean.DataDTO;
  * @param <F>
  *
  */
-public abstract class ChainEvent<CE extends EventBean<ced>, ced extends DataDTO, NE extends EventBean<ned>, ned extends DataDTO> {
+public abstract class ChainEvent<CE extends EventBean<ced>, ced extends DataDTO> {
 	
 	protected ChainEvent nextEvent;
 	
-	public abstract void doEvent(EventBean<ced> event);
+	protected CE ceb;
+	
+	
+	public abstract void doEvent();
 	
 	public ChainEvent(ChainEvent nextEvent) {
 		this.nextEvent = nextEvent;
