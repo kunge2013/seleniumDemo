@@ -9,9 +9,9 @@ import com.selenium.dto.EventBean.DataDTO;
  * @param <F>
  *
  */
-public abstract class ChainEvent<CE extends EventBean<ced>, ced extends DataDTO> {
+public abstract class BaseEvent<CE extends EventBean<ced>, ced extends DataDTO> {
 	
-	protected ChainEvent nextEvent;
+	protected BaseEvent nextEvent;
 	
 	protected CE ceb;
 	
@@ -22,19 +22,19 @@ public abstract class ChainEvent<CE extends EventBean<ced>, ced extends DataDTO>
 		if(hasNextEvent()) nextEvent.doEvent();
 	}
 	
-	public ChainEvent(ChainEvent nextEvent) {
+	public BaseEvent(BaseEvent nextEvent) {
 		this.nextEvent = nextEvent;
 	}
 	
-	public ChainEvent() {
+	public BaseEvent() {
 		// TODO Auto-generated constructor stub
 	}
 
-	public ChainEvent getNextEvent() {
+	public BaseEvent getNextEvent() {
 		return nextEvent;
 	}
 
-	public void setNextEvent(ChainEvent nextEvent) {
+	public void setNextEvent(BaseEvent nextEvent) {
 		this.nextEvent = nextEvent;
 	}
 	

@@ -3,7 +3,7 @@ package com.selenium.event;
 import com.selenium.dto.LoginBean;
 import com.selenium.dto.LoginBean.LoginDTO;
 
-public class LoginEvent extends ChainEvent<LoginBean, LoginDTO> {
+public class LoginEvent extends BaseEvent<LoginBean, LoginDTO> {
 		
 
 	@Override
