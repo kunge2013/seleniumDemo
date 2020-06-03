@@ -18,6 +18,7 @@ public abstract class BaseEvent<CE extends EventBean<ced>, ced extends DataDTO> 
 	protected abstract void service(CE ceb);
 	
 	public void  doEvent() {
+		System.out.println(this.getClass());
 		service(ceb);
 		if(hasNextEvent()) nextEvent.doEvent();
 	}
@@ -25,21 +26,20 @@ public abstract class BaseEvent<CE extends EventBean<ced>, ced extends DataDTO> 
 	public BaseEvent(BaseEvent nextEvent) {
 		this.nextEvent = nextEvent;
 	}
-	
-	public BaseEvent() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public BaseEvent getNextEvent() {
 		return nextEvent;
 	}
 
-	public void setNextEvent(BaseEvent nextEvent) {
-		this.nextEvent = nextEvent;
-	}
 	
 	protected boolean hasNextEvent() {
-		return nextEvent == null;
+		return nextEvent != null;
+	}
+
+	public BaseEvent(BaseEvent nextEvent, CE ceb) {
+		super();
+		this.nextEvent = nextEvent;
+		this.ceb = ceb;
 	}
 	
 }
