@@ -19,6 +19,14 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/ma
 		    <artifactId>selenium-java</artifactId>
 		    <version>3.141.5</version>
 		</dependency>
+		
+		<!-- 单元测试添加 -->		
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.12</version>
+		</dependency>
+
 	</dependencies>
 
 	<licenses>
