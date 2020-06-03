@@ -15,8 +15,12 @@ public abstract class ChainEvent<CE extends EventBean<ced>, ced extends DataDTO>
 	
 	protected CE ceb;
 	
+	protected abstract void service(CE ceb);
 	
-	public abstract void doEvent();
+	public void  doEvent() {
+		service(ceb);
+		if(hasNextEvent()) nextEvent.doEvent();
+	}
 	
 	public ChainEvent(ChainEvent nextEvent) {
 		this.nextEvent = nextEvent;

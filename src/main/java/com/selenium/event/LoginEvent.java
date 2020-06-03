@@ -5,9 +5,10 @@ import com.selenium.dto.LoginBean.LoginDTO;
 
 public class LoginEvent extends ChainEvent<LoginBean, LoginDTO> {
 		
+
 	@Override
-	public void doEvent() {
+	protected void service(LoginBean ceb) {
+		// TODO Auto-generated method stub
 		
 	}
-	
 }

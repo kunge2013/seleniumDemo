@@ -5,9 +5,9 @@ import com.selenium.dto.AmountBean;
 public class AmountEvent extends ChainEvent<AmountBean, AmountBean.GoodAmountDTO> {
 
 	@Override
-	public void doEvent() {
+	protected void service(AmountBean ceb) {
 		// TODO Auto-generated method stub
-
+		
 	}
 
 }
