@@ -1,18 +1,25 @@
 package com.selenium.event;
 
-import com.selenium.dto.AmountBean;
+import com.selenium.event.AmountEvent.GoodAmountDTO;
 
-public class AmountEvent extends BaseEvent<AmountBean, AmountBean.GoodAmountDTO> {
+public class AmountEvent extends Event<GoodAmountDTO> {
 
-	public AmountEvent(BaseEvent nextEvent, AmountBean ceb) {
-		super(nextEvent, ceb);
-		// TODO Auto-generated constructor stub
-	}
+	public static class GoodAmountDTO extends Event.DataDTO {
+		
+		private String amount;
 
-	@Override
-	protected void service(AmountBean ceb) {
-		// TODO Auto-generated method stub
+		public String getAmount() {
+			return amount;
+		}
+
+		public void setAmount(String amount) {
+			this.amount = amount;
+		}
 		
 	}
 
+	@Override
+	public int initEventType() {
+		return 0;
+	}
 }

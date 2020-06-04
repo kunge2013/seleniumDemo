@@ -25,7 +25,7 @@ public class DriverTest {
 			String password = "123456";// scanner.nextLine();
 			driver.findElement(By.name("password")).sendKeys(password);
 
-			System.out.println("ÇëÊäÈëÑéÖ¤Âë£º");
+			System.out.println("è¯·è¾“å…¥éªŒè¯ç ï¼š");
 			String verCode = scanner.nextLine();
 			driver.findElement(By.name("verCode")).sendKeys(verCode);
 
@@ -34,8 +34,8 @@ public class DriverTest {
 			Thread.sleep(5000);
 			List<WebElement> divs = driver.findElements(By.className("icon-item"));
 
-			/*********************************ÇëÊäÈëÉÌÆ·½ğ¶î£º*************************************/
-			// ÊäÈë½ğ¶î
+			/*********************************è¯·è¾“å…¥å•†å“é‡‘é¢ï¼š*************************************/
+			// è¾“å…¥é‡‘é¢
 			
 		
 			int  i = 0;
@@ -51,7 +51,7 @@ public class DriverTest {
 		} finally {
 			
 		}
-		System.out.println("ÍË³öÇëÊäÈë quit °´»Ø³µ!");
+		System.out.println("é€€å‡ºè¯·è¾“å…¥ quit æŒ‰å›è½¦!");
 		while(true) {
 			String quitComment = scanner.nextLine();
 			if ("quit".equals(quitComment)) {
@@ -65,12 +65,12 @@ public class DriverTest {
 	}
 	
 	public static WebElement createSubmitHandler(WebDriver driver) {
-		System.out.println("ÇëÊäÈëÉÌÆ·½ğ¶î£º");
+		System.out.println("è¯·è¾“å…¥å•†å“é‡‘é¢ï¼š");
 		if(amount.isEmpty()) {
 			amount = scanner.nextLine();
 		}
-		System.out.println("ÊäÈë½ğ¶îÎª ====" + amount);
-		// ¶¯Ì¬×¨Çø½ğ¶îÊäÈë
+		System.out.println("è¾“å…¥é‡‘é¢ä¸º ====" + amount);
+		// åŠ¨æ€ä¸“åŒºé‡‘é¢è¾“å…¥
 		List<WebElement> dtzqs = driver.findElements(By.name("amount"));
 		String camount = "";
 		for (int i = 0; i < dtzqs.size(); i++) {
@@ -85,7 +85,7 @@ public class DriverTest {
 			}
 		}
 		
-		// µ¥»÷È·¶¨
+		// å•å‡»ç¡®å®š
 		List<WebElement> buttons = driver.findElement(By.id("model6")).findElements(By.tagName("input"));
 		WebElement submit = null;
 		if (buttons != null && buttons.size() > 0) {
