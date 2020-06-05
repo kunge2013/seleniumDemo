@@ -1,15 +1,13 @@
 package com.selenium.listeners;
 
+import org.openqa.selenium.WebDriver;
+
 import com.selenium.event.QuitEvent;
 
 public class QuitListener extends BaseListener<QuitEvent, QuitEvent.QuitDTO>{
 
-
-
-
-	public QuitListener(QuitEvent ceb) {
-		super(ceb);
-		// TODO Auto-generated constructor stub
+	public QuitListener(QuitEvent ceb, WebDriver driver) {
+		super(ceb, driver);
 	}
 
 	@Override

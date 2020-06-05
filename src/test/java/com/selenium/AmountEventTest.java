@@ -12,8 +12,6 @@ public class AmountEventTest {
 	@Test
 	public void test() {
 		
-		AmountListener event = new AmountListener(new AmountEvent());
-		LoginListener login = new LoginListener(new LoginEvent());
-		login.doEvent();
+	
 	}
 }
